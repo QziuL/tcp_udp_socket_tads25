@@ -16,8 +16,11 @@ def start_server( host: str, port: int):
             clients.add(addr)
 
         for client in clients:
-            server.sendto(data, client)
-
+            if addr != client:
+                server.sendto(data, client)
+            if addr == client:
+                server.sendto(''.encode(), client)
+            
 
 
 if __name__=='__main__':

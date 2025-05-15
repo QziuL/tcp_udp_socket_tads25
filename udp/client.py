@@ -13,7 +13,6 @@ def send_message(host: str, port: int):
         print(f'[Message]: {data.decode()}')
 
 
-
 if __name__=='__main__':
 
     HOST = 'localhost'
